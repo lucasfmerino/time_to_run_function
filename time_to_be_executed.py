@@ -3,10 +3,10 @@ from time import time
 
 def f_master(func):
     def time_tbe(*args, **kwargs):
-        star_time = time()
+        start_time = time()
         result = func(*args, **kwargs)
         end_time = time()
-        total = (end_time - star_time) * 1000
+        total = (end_time - start_time) * 1000
         print(f'The function {func.__name__} took {total:.2f} ms to be executed')
         return result
 
